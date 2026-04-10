@@ -426,7 +426,7 @@ body {
 
 .hero-text {
   flex: 1;
-  max-width: 50%;
+  max-width: 55%; /* texte limité à gauche */
 }
 
 .hero-text h1 {
@@ -438,12 +438,12 @@ body {
   text-align: center;                
 }
 
-
 .hero-text p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 30px;
 }
+
 .hero-box {
   background-color: rgba(0,0,0,0.8); 
   color: #fff;                       
@@ -458,31 +458,25 @@ body {
 
 .hero-photo {
   flex: 1;
+  max-width: 40%; /* image limitée à droite */
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* pousse l’image vers la droite */
 }
 
 .hero-photo img {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
-.hero-photo img {
-  width: auto;              
-  height: auto;            
-  border-radius: 0;        
-  border: none;             
-  margin-left: 30px;        
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4); 
-  transition: transform 0.8s ease, box-shadow 0.8s ease; /* animation fluide */
+  border-radius: 50%; /* rond */
+  margin-left: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
 }
 
 .hero-photo img:hover {
-  transform: scale(1.1) rotate(5deg); /* zoom + légère rotation */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* ombre plus forte */
+  transform: scale(1.1) rotate(5deg); 
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5); 
 }
+
 
 .about {
   display: flex;
