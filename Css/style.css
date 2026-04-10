@@ -72,11 +72,15 @@ header {
 }
 
 .projets h2 {
-  grid-column: 1 / -1;                   /* le titre prend toute la largeur */
-  text-align: center;                    /* centré */
+  grid-column: 1 / -1;          
+  text-align: center;           
   margin-bottom: 30px;
-  color: #1e90ff;
+  color: #fff !important;                  
+  font-size: 2.5em;             
+  font-weight: bold;            
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6); 
 }
+
 
 .carte-projet {
   background: #000000;
@@ -311,7 +315,6 @@ footer a {
   color: #ffd700;
 }
 
-
 .competences {
   max-width: 900px;
   margin: 40px auto;
@@ -529,11 +532,13 @@ body {
   transform: rotateY(180deg);       /* rotation horizontale au survol */
 }
 
-
 .skills h2 {
-  color: #ffd700;
-  font-weight: bold;
-  font-size: 2em;
+  color: #fff;                  
+  font-weight: bold;            
+  font-size: 2.5em;             
+  text-align: center;          
+  margin-bottom: 30px;          
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
 
 .skills {
