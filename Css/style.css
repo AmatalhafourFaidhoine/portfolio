@@ -12,24 +12,23 @@ nav {
   background: #83d0d6;
 }
 
-/* barre de recherche à gauche */
 .search-bar {
   padding: 6px 10px;
   border-radius: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #444444;
 }
 
-/* liens à droite */
+
 .nav-right {
   display: flex;
-  margin-left: auto; /* pousse complètement à droite */
+  margin-left: auto; 
   list-style: none;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* espace entre les liens */
+
 .nav-right li {
   margin-left: 20px;
 }
@@ -46,7 +45,7 @@ header {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #00ffd5;
+  background: #28a745;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -67,7 +66,8 @@ header {
 }
 
 .carte-projet {
-  background: white;
+  background: #000000;
+  color: white; 
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -76,13 +76,13 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 420px;          
-  cursor: pointer; /* pointeur de souris */
+  cursor: pointer; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carte-projet:hover {
-  transform: scale(1.05); /* zoom léger */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* ombre plus marquée */
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(255,255,255,0.3); 
 }
 
 .carte-projet img {
@@ -105,7 +105,8 @@ header {
 .contact {
   max-width: 300px;
   margin: 50px auto;
-  background: white;
+  background:#000000;
+  color: white; 
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -125,13 +126,24 @@ header {
 
 .contact input,
 .contact textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+  background-color: #222222; 
+  color: white;
+  border: 1px solid #444444;
   border-radius: 5px;
+  padding: 10px;
 }
 
 .contact button {
-  align-self: center; /* centre le bouton */
+  background-color: #28a745; /* vert */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #218838; /* vert foncé au survol */
 }
 
 .contact-intro {
@@ -142,7 +154,6 @@ header {
   color: #fff;            
   max-width: 800px;      
 }
-
 
 .contact-info {
   max-width: 400px;              
@@ -155,7 +166,6 @@ header {
   text-align: center;               
 }
 
-
 .contact-info h3 {
   color: #e1e4e7;                
   margin-bottom: 15px;
@@ -165,6 +175,40 @@ header {
   color: #fff;                   
   text-decoration: underline;
 }
+
+
+.form-projet {
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 30px auto;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+}
+
+.form-projet input,
+.form-projet textarea {
+  background-color: #222222;
+  color: white;
+  border: 1px solid #444444;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.form-projet button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-projet button:hover {
+  background-color: #218838;
+}
+
 
 nav {
   background: #83d0d6; /* gris foncé */
@@ -178,7 +222,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00e6a1;
+  color:#218838;
 }
 
 footer {
@@ -198,7 +242,7 @@ footer a {
 .btn-nav {
   display: inline-block;
   padding: 10px 20px;
-  background: #00e6a1;   
+  background: #28a745;   
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -207,13 +251,15 @@ footer a {
 }
 
 .btn-nav:hover {
-  background: #00e6a1;   
+  background: #28a745;
+  color: #ffffff;    
 }
 
 .education {
   max-width: 800px;
   margin: 40px auto;
-  background: #ffffff;
+  background: #000000;
+  color: white; 
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -410,7 +456,8 @@ body {
 
 .about-text {
   flex: 1;
-  background: #ffffff;           /* fenêtre blanche */
+  background: #000000;
+  color: white;          
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
