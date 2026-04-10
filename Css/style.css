@@ -9,7 +9,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 15px;
-  background:  #0a9ebc;
+  background: #024536;
 }
 
 .search-bar {
@@ -548,7 +548,7 @@ body {
 }
 
 .skill-card {
-  background: #0a9ebc; 
+  background: #0a1f44; 
   color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -558,7 +558,7 @@ body {
 
 .skill-card:hover {
   transform: translateY(-5px);
-  background:  #63d6d0;
+  background:  #112b66;
 }
 
 .skill-card h3 {
