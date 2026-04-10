@@ -9,7 +9,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 15px;
-  background: #83d0d6;
+  background: #1e90ff;
 }
 
 .search-bar {
@@ -28,9 +28,22 @@ nav {
   margin-bottom: 0;
 }
 
-
 .nav-right li {
   margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #187bcd; /* bleu foncé au survol */
+  color: white;
 }
 
 
@@ -134,7 +147,7 @@ header {
 }
 
 .contact button {
-  background-color: #28a745; /* vert */
+  background-color: #1e90ff; 
   color: white;
   padding: 10px 20px;
   border: none;
@@ -143,8 +156,9 @@ header {
 }
 
 .contact button:hover {
-  background-color: #218838; /* vert foncé au survol */
+  background-color: #187bcd; 
 }
+
 
 .contact-intro {
   margin: 40px auto;       
@@ -209,9 +223,14 @@ header {
   background-color: #218838;
 }
 
+.form-projet h2 {
+  text-align: center;
+  color: #63d6d0; 
+  margin-bottom: 20px;
+}
 
-nav {
-  background: #83d0d6; /* gris foncé */
+/*nav {
+  background: #83d0d6; 
   padding: 15px;
 }
 
@@ -223,7 +242,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color:#218838;
-}
+}*/
 
 footer {
   text-align: center;
@@ -516,7 +535,6 @@ body {
   font-size: 2em;
 }
 
-
 .skills {
   text-align: center;
   margin-top: 50px;
@@ -530,18 +548,24 @@ body {
 }
 
 .skill-card {
-  background: #2a5298;    
-  padding: 20px;
-  border-radius: 10px;
+  background: #0a1f44; 
   color: #fff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  background: rgba(255,255,255,0.2);
+  background:  #112b66;
 }
+
+.skill-card h3 {
+  color: #63d6d0; 
+  margin-bottom: 10px;
+}
+
 
 .projets h2 {
   color: #1e90ff;
