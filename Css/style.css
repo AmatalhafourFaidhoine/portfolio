@@ -418,7 +418,7 @@ body {
 
 .hero {
   display: flex;
-  align-items: flex-start;   /* aligne tout en haut */
+  align-items: flex-start;   /* aligne en haut */
   justify-content: space-between;
   padding: 50px;
   color: white;
@@ -430,36 +430,51 @@ body {
   max-width: 55%;            /* texte limité à gauche */
 }
 
-.hero-box {
-  background-color: rgba(0,0,0,0.8); 
-  color: #fff;                       
-  font-size: 1.2em;                   
-  padding: 30px;
-  border-radius: 10px;                
-  max-width: 800px;
-  margin: 20px auto;                  
+.hero-text h1 {
+  font-size: 2em;            /* taille réduite */
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  font-weight: bold;
   text-align: center;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
+}
+
+.hero-text p {
+  font-size: 1.1em;          /* texte un peu plus petit */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.hero-box {
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  font-size: 1.1em;          /* réduit pour tenir mieux */
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 700px;          /* réduit la largeur */
+  margin: 20px auto;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
 .hero-photo {
   flex: 1;
-  max-width: 40%;            /* colonne image à droite */
+  max-width: 35%;            /* réduit la largeur de la photo */
   display: flex;
-  justify-content: flex-end; /* pousse l’image à droite */
-  align-items: flex-start;   /* aligne l’image en haut */
+  justify-content: flex-end; /* pousse à droite */
+  align-items: flex-start;   /* aligne en haut */
 }
 
 .hero-photo img {
-  width: 300px;              /* taille fixe */
-  height: auto;              /* conserve proportions */
-  margin-left: 30px;         /* espace entre texte et image */
+  width: 220px;              /* photo plus petite */
+  height: auto;
+  margin-left: 20px;         /* espace entre texte et photo */
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
   transition: transform 0.8s ease, box-shadow 0.8s ease;
 }
 
 .hero-photo img:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
