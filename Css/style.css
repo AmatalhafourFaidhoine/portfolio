@@ -83,7 +83,7 @@ header {
 
 
 .carte-projet {
-  background: #000000;
+  background: rgba(0,0,0,0.7);
   color: white; 
   padding: 20px;
   border-radius: 10px;
@@ -122,7 +122,7 @@ header {
 .contact {
   max-width: 300px;
   margin: 50px auto;
-  background:#000000;
+  background: rgba(0,0,0,0.7);
   color: white; 
   padding: 30px;
   border-radius: 10px;
@@ -197,7 +197,7 @@ header {
 
 
 .form-projet {
-  background-color: #000000;
+  background-color: rgba(0,0,0,0.7);
   color: white;
   padding: 20px;
   border-radius: 8px;
@@ -268,7 +268,7 @@ footer a {
 .education {
   max-width: 800px;
   margin: 40px auto;
-  background: #000000;
+  background: rgba(0,0,0,0.7);
   color: white; 
   padding: 25px;
   border-radius: 10px;
@@ -356,6 +356,7 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px #00e0ff;
     transform: scale(1.03);
 }
+
 
 button {
     padding: 10px 20px;
@@ -478,7 +479,7 @@ body {
 
 .about-text {
   flex: 1;
-  background: #000000;
+  background: rgba(0,0,0,0.7);
   color: white;          
   padding: 25px;
   border-radius: 10px;
@@ -533,7 +534,7 @@ body {
 
 
 .skills h2 {
-  color: #ffd700;
+  color: #f2f2f2;
   font-weight: bold;
   font-size: 2em;
 }
@@ -571,7 +572,7 @@ body {
 
 
 .projets h2 {
-  color: #1e90ff;
+  color: #eef2f6;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -603,31 +604,39 @@ body {
   background-color: #104e8b;
 }
 
-
-
-
+.form-projet form {
+  background: none !important;   
+  padding: 0 !important;         
+  border-radius: 0 !important;   
+  box-shadow: none !important;   
+}
 
 .search-form {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px auto;
+  background: none !important;   
+  box-shadow: none !important;   
+  padding: 0 !important;        
 }
 
 .search-form input {
-  padding: 10px;
+  width: 160px;
+  padding: 5px 8px;
+  font-size: 0.85em;
   border-radius: 10px 0 0 10px;
-  border: none;
+  border: 1px solid #444;
 }
 
 .search-form button {
-  padding: 10px;
+  padding: 5px 10px;
+  font-size: 0.85em;
   border-radius: 0 10px 10px 0;
   border: none;
-  background: #38f8db;
+  background: #28a745; /* bouton vert */
   color: white;
+  cursor: pointer;
 }
-
-
 
 
 
