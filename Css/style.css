@@ -122,7 +122,7 @@ header {
 .contact {
   max-width: 300px;
   margin: 50px auto;
-  background: rgba(0,0,0,0.7);
+  background: #000000;
   color: white; 
   padding: 30px;
   border-radius: 10px;
@@ -197,7 +197,7 @@ header {
 
 
 .form-projet {
-  background-color: rgba(0,0,0,0.7);
+  background-color: #000000;
   color: white;
   padding: 20px;
   border-radius: 8px;
