@@ -1,3 +1,4 @@
+ <!-- Pour excuter: http://localhost/php/Portfolio/ -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,16 +9,8 @@
 
 </head>
 <body>
-  <nav>
-  <input type="text" placeholder="🔍Rechercher..." class="search-bar">
-
-  <ul class="nav-right">
-    <li><a href="index.html" class="btn-nav">Accueil</a></li>
-    <li><a href="about.html" class="btn-nav">À propos</a></li>
-    <li><a href="projets.html" class="btn-nav">Projets</a></li>
-    <li><a href="contact.html" class="btn-nav">Contact</a></li>
-  </ul>
-</nav>
+  
+  <?php require 'composants/navigation.php'; ?>
 
 <section class="about">
   <div class="about-text">
@@ -65,13 +58,7 @@
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Amatal-hafour Faidhoine | 
-    <a href="https://github.com/" target="_blank">GitHub</a> | 
-    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a> | 
-    <a href="Mon-CV .pdf" target="_blank">Voir mon CV</a>
-  </p>
-</footer>
+<?php require 'composants/pied-de-page.php'; ?>
 
 </body>
 </html>

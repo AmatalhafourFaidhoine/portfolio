@@ -119,6 +119,11 @@ header {
   }
 }
 
+.actif {
+  background-color: #063f6c; 
+  color: #fff;
+}
+
 .contact {
   max-width: 350px;
   margin: 50px auto;
@@ -736,7 +741,3 @@ body {
     width: 90%;                
   }
 }
-
-
-
-
