@@ -22,13 +22,8 @@ $projets = [
         'technologies' => ['Arduino', 'Capteur ultrason', 'Servomoteur'],
         'image' => 'Images/projet3.jpeg',
         'lien' => 'https://github.com/AmatalhafourFaidhoine/projet3-boubelle-intelligente/blob/main/projet3-boubelle-intelligente.ino'
-    ],
-    [
-        'titre' => 'Mini site web en PHP',
-        'description' => 'Un projet de site web dynamique en PHP avec gestion de formulaires et affichage conditionnel. Ce projet illustre les bases du développement web côté serveur.',
-        'technologies' => ['PHP', 'HTML', 'CSS'],
-        'image' => 'Images/projet4.jpeg'
     ]
+   
 ];
 
 
