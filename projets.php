@@ -52,7 +52,7 @@ if ($mot_cle !== '') {
 <body>
 
 <section class="recherche-projets">
-  <h2>Recherche de projets</h2>
+  <h2><em>Recherche de projets</em></h2>
   <form class="search-form" method="get" action="projets.php">
     <input type="text" name="motcle" placeholder="Entrez un mot-clé..." value="<?= $mot_cle ?>" required>
     <button type="submit">Rechercher</button>
