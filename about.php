@@ -10,7 +10,15 @@
 </head>
 <body>
   
-  <?php require 'composants/navigation.php'; ?>
+  
+  <?php
+    require 'config/connexion.php';
+    require 'composants/navigation.php';
+    require 'composants/fonctions.php';
+
+    // Journaliser la visite
+    log_visite($pdo, 'about.php');
+  ?>
 
 <section class="about">
   <div class="about-text">

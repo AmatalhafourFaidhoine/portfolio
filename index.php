@@ -10,7 +10,14 @@
 </head>
 <body>
 
-<?php require 'composants/navigation.php'; ?>
+<?php
+  require 'config/connexion.php';
+  require 'composants/navigation.php';
+  require 'composants/fonctions.php';
+
+  // Journaliser la visite
+  log_visite($pdo, 'index.php');
+?>
 
 <header class="hero">
   <div class="hero-text">

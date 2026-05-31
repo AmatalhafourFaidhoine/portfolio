@@ -1,45 +1,45 @@
 <?php
+session_start(); // Toujours démarrer la session
+
+require 'config/connexion.php';
 require 'composants/fonctions.php';
 require 'composants/navigation.php';
 
+log_visite($pdo, 'projets.php');
 
-$projets = [
-    [
-        'titre' => 'Système d’inversion de nombres en Java',
-        'description' => 'Ce projet, développé en Java sous Eclipse, applique la programmation orientée objet pour structurer le code et manipuler efficacement les données grâce à des méthodes simples et organisées.',
-        'technologies' => ['Java', 'Eclipse', 'POO'],
-        'image' => 'Images/Projet1.jpeg'
-    ],
-    [
-        'titre' => 'Système de chiffrement et déchiffrement de données avec OpenSSL',
-        'description' => 'Ce projet utilise AES avec OpenSSL pour chiffrer et déchiffrer des données à l’aide d’un mot de passe, afin d’assurer leur confidentialité. Cette approche illustre les bases de la sécurité informatique, notamment la confidentialité et la protection des informations.',
-        'technologies' => ['Kali Linux', 'AES', 'Terminal Linux'],
-        'image' => 'Images/Projet2.jpeg'
-    ],
-    [
-        'titre' => 'Poubelle intelligente',
-        'description' => 'Ce prototype est un système automatisé basé sur une carte Arduino, équipé d’un capteur à ultrasons et d’un servomoteur. Il détecte la présence d’un objet à l’avant et déclenche automatiquement l’ouverture ou la fermeture du couvercle, illustrant une solution simple d’objet intelligent sans contact, à la fois pratique et hygiénique.',
-        'technologies' => ['Arduino', 'Capteur ultrason', 'Servomoteur'],
-        'image' => 'Images/projet3.jpeg',
-        'lien' => 'https://github.com/AmatalhafourFaidhoine/projet3-boubelle-intelligente/blob/main/projet3-boubelle-intelligente.ino'
-    ]
-   
-];
 
+
+// Génération du token CSRF pour la recherche
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
 
 $mot_cle = nettoyer($_GET['motcle'] ?? '');
 $resultats = [];
 
 if ($mot_cle !== '') {
-    foreach ($projets as $projet) {
-        if (stripos($projet['titre'], $mot_cle) !== false || stripos($projet['description'], $mot_cle) !== false) {
-            $resultats[] = $projet;
-        }
+    // Vérification CSRF si le formulaire est soumis
+    if (isset($_GET['csrf_token']) && !hash_equals($_SESSION['csrf_token'], $_GET['csrf_token'])) {
+        die(" CSRF token invalide");
     }
+
+    $sql = "SELECT * FROM projets 
+            WHERE titre LIKE :motcle 
+               OR description LIKE :motcle 
+               OR technologies LIKE :motcle
+            ORDER BY date_creation DESC";
+    $stmt = $pdo->prepare($sql);
+    $like = "%$mot_cle%";
+    $stmt->bindParam(':motcle', $like);
+    $stmt->execute();
+    $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } else {
-    $resultats = $projets;
+    $sql = "SELECT * FROM projets ORDER BY date_creation DESC";
+    $stmt = $pdo->query($sql);
+    $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -54,10 +54,12 @@ if ($mot_cle !== '') {
 <section class="recherche-projets">
   <h2><em>Recherche de projets</em></h2>
   <form class="search-form" method="get" action="projets.php">
-    <input type="text" name="motcle" placeholder="Entrez un mot-clé..." value="<?= $mot_cle ?>" required>
+    <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+    <input type="text" name="motcle" placeholder="Entrez un mot-clé..." value="<?= htmlspecialchars($mot_cle) ?>" required>
     <button type="submit">Rechercher</button>
   </form>
 </section>
+
 
 <section class="projets">
   <h2><em>Mes Réalisations</em></h2>
@@ -69,7 +71,7 @@ if ($mot_cle !== '') {
         <div class="details">
           <h3><?= htmlspecialchars($projet['titre']) ?></h3>
           <p><?= htmlspecialchars($projet['description']) ?></p>
-          <p><strong>Technologies :</strong> <?= implode(', ', $projet['technologies']) ?></p>
+          <p><strong>Technologies :</strong> <?= htmlspecialchars($projet['technologies']) ?></p>
           <?php if (!empty($projet['lien'])): ?>
             <a href="<?= htmlspecialchars($projet['lien']) ?>" class="btn-code" target="_blank">Voir le code sur GitHub</a>
           <?php endif; ?>
@@ -77,9 +79,10 @@ if ($mot_cle !== '') {
       </div>
     <?php endforeach; ?>
   <?php else: ?>
-    <p style="color:red;">❌ Aucun projet ne correspond à votre recherche.</p>
+    <p style="color:red;"> Aucun projet ne correspond à votre recherche.</p>
   <?php endif; ?>
 </section>
+
 
 <?php require 'composants/pied-de-page.php'; ?>
 
