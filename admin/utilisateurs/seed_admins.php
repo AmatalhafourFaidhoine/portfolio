@@ -1,5 +1,5 @@
 <?php
-require '../../config/connexion.php';
+require '../../Config/connexion.php';
 
 // Supprimer tous les anciens comptes
 $pdo->exec("TRUNCATE TABLE administrateurs");
@@ -34,3 +34,5 @@ foreach ($admins as $admin) {
 }
 
 echo "Comptes insérés avec succès.\n";
+
+?>

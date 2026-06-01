@@ -12,9 +12,9 @@
   
   
   <?php
-    require 'config/connexion.php';
-    require 'composants/navigation.php';
-    require 'composants/fonctions.php';
+    require 'Config/connexion.php';
+    require 'Composants/navigation.php';
+    require 'Composants/fonctions.php';
 
     // Journaliser la visite
     log_visite($pdo, 'about.php');
@@ -66,7 +66,7 @@
   </div>
 </section>
 
-<?php require 'composants/pied-de-page.php'; ?>
+<?php require 'Composants/pied-de-page.php'; ?>
 
 </body>
 </html>

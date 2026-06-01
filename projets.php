@@ -1,9 +1,9 @@
 <?php
 session_start(); // Toujours démarrer la session
 
-require 'config/connexion.php';
-require 'composants/fonctions.php';
-require 'composants/navigation.php';
+require 'Config/connexion.php';
+require 'Composants/fonctions.php';
+require 'Composants/navigation.php';
 
 log_visite($pdo, 'projets.php');
 
@@ -84,7 +84,7 @@ if ($mot_cle !== '') {
 </section>
 
 
-<?php require 'composants/pied-de-page.php'; ?>
+<?php require 'Composants/pied-de-page.php'; ?>
 
 </body>
 </html>

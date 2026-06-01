@@ -1,7 +1,7 @@
 <?php
 session_start();
-require '../../config/connexion.php';
-require '../../composants/fonctions.php';
+require '../../Config/connexion.php';
+require '../../Composants/fonctions.php';
 
 // Vérifier si l'admin est connecté
 if (!isset($_SESSION['admin_id'])) {

@@ -1,7 +1,7 @@
 <?php
 session_start();
-require '../../composants/fonctions.php';
-require '../../config/connexion.php';
+require '../../Composants/fonctions.php';
+require '../../Config/connexion.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prenom = nettoyer($_POST['prenom']);

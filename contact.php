@@ -1,9 +1,9 @@
 <?php
 session_start(); 
 
-require 'config/connexion.php';
-require 'composants/fonctions.php';
-require 'composants/navigation.php';
+require 'Config/connexion.php';
+require 'Composants/fonctions.php';
+require 'Composants/navigation.php';
 
 log_visite($pdo, 'contact.php');
 
@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['csrf_token']) && isse
   <p>Adresse : Dakar, Sénégal</p>
 </section>
 
-<?php require 'composants/pied-de-page.php'; ?>
+<?php require 'Composants/pied-de-page.php'; ?>
 
 </body>
 </html>

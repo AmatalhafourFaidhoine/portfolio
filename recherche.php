@@ -1,9 +1,9 @@
 <?php
-require 'config/connexion.php';
-require 'composants/fonctions.php';
+require 'Config/connexion.php';
+require 'Composants/fonctions.php';
 
 // Journaliser la visite
-log_visite($pdo, '.php');
+log_visite($pdo, 'recherche.php');
 
 $resultats = [];
 $message = '';
